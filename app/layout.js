@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.className} overflow-x-hidden overflow-y-auto sm:overflow-y-none`}
+        className={`${inter.className} overflow-x-hidden`}
       >
         <Navbar />
         <div className="mt-[60px] h-[calc(100vh-62.5px)] w-100 overflow-y-hidden">{children}</div>
