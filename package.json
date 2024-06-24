@@ -14,6 +14,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "appwrite": "^15.0.0",
     "dotenv": "^16.4.5",
     "flowbite": "^2.3.0",
     "flowbite-react": "^0.9.0",
@@ -25,10 +26,13 @@
     "react-vector-icons": "^0.0.1"
   },
   "devDependencies": {
+    "@types/node": "20.14.8",
+    "@types/react": "18.3.3",
     "autoprefixer": "^10.4.19",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.4"
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.5.2"
   }
 }
