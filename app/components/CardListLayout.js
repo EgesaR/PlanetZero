@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Card from "./card.jsx";
+import BlogPage from "./BlogPage.js"
 
 const CardListLayout = () => {
   const [showModal, setShowModal] = useState(true)
