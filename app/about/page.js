@@ -5,7 +5,7 @@ import people from "../data/people.js";
 const About = () => {
   return (
     <div className="mt-12 px-10 overflow-x-hidden">
-      <h1 className="text-4xl sm:text-5xl font-underline font-semibold text-slate-700 text-center sm:text-left">
+      <h1 className="text-4xl sm:text-5xl font-underline font-semibold text-slate-700 text-center sm:text-left mt-3">
         About us
       </h1>
       <div className="mt-8 flex flex-col justify-center items-center">

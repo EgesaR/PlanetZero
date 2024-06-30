@@ -5,7 +5,7 @@ const Navbar = () => {
   const mongo =
     "mongodb+srv://egesaraymond644:<password>@planetzero.y0eqwqa.mongodb.net/?retryWrites=true&w=majority&appName=planetzero";
   return (
-    <div className="w-full h-[65px] flex justify-between items-center px-5 border border-2 fixed top-0 left-0 bg-white">
+    <div className="w-full h-[65px] flex justify-between items-center px-5 border border-2 fixed top-0 left-0 bg-white z-10">
       <h1 className="sm:text-4xl text-xl fomt-bold">PlanetZero</h1>
       <form className="hidden sm:block">
         <input
