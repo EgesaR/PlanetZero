@@ -3,8 +3,7 @@ import {useState} from "react"
 import { Button, Label, Modal, ModalBody, Footer, FooterBrand, FooterComponent, FooterCopyright, FooterDivider,
 	FooterIcon, FooterLink, FooterLinkGroup, FooterTitle, } from "flowbite-react";
 
-const BlogPage = ({ invisibility }) => {
-  const [showModal, setShowModal] = useState(true)
+const BlogPage = ({ invisibility, showModal, setShowModal }) => {
   
   const handleCloseModal = () => {
     setShowModal(false)

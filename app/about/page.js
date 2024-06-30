@@ -4,13 +4,13 @@ import people from "../data/people.js";
 
 const About = () => {
   return (
-    <div className="mt-12 px-10 overflow-x-hidden">
+    <div className="mt-12 px-10 overflow-x-hidden overflow-y-scroll h-full">
       <h1 className="text-4xl sm:text-5xl font-underline font-semibold text-slate-700 text-center sm:text-left mt-3">
         About us
       </h1>
       <div className="mt-8 flex flex-col justify-center items-center">
         <img
-          src=""
+          src="/me.png"
           alt="Bronsted img"
           className="h-[10rem] w-[10rem] bg-sky-800 rounded-full"
         />
