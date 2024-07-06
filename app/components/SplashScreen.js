@@ -20,7 +20,7 @@ const SplashScreen = ({ finishLoading }) => {
   };
 
   useEffect(() => {
-    const timeOut = setTimeout(() => setIsMounted(true), 20);
+    const timeOut = setTimeout(() => setIsMounted(true), 30);
     animate();
     return () => clearTimeout(timeOut);
   }, []);
