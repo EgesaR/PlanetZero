@@ -14,13 +14,13 @@ const SplashScreen = ({ finishLoading }) => {
       targets: "#playlist",
       delay: 0,
       scale: 1,
-      duration: 13000,
+      duration: 20000,
       easing: "easeInOutExpo",
     });
   };
 
   useEffect(() => {
-    const timeOut = setTimeout(() => setIsMounted(true), 1700);
+    const timeOut = setTimeout(() => setIsMounted(true), 10);
     animate();
     return () => clearTimeout(timeOut);
   }, []);
