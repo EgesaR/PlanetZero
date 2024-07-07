@@ -14,7 +14,7 @@ const SplashScreen = ({ finishLoading }) => {
       targets: "#playlist",
       delay: 0,
       scale: 1,
-      duration: 20000,
+      duration: 18000,
       easing: "easeInOutExpo",
     });
   };
