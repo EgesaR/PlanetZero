@@ -7,56 +7,63 @@ import BottomTextInput from "../../components/TextInput";
 import Image from "next/image";
 import { Button, Checkbox, Label } from "flowbite-react";
 
-const SignUp = () => {
+const SignIn = () => {
   return (
-    <div className="w-full p-3 h-full">
-      <div className="bg-slate-200 h-full flex-1 rounded-xl flex flex-row">
-        <div className="flex-1 h-full">
-          <div className="flex flex-col items-center justify-center h-[90%]">
-            <h1 className="text-4xl font-bold w-[80%]">
-              Hi there,
-              <br />
-              Welcome Back
-            </h1>
-            <label className="text-slate-800 text-md mt-3  w-[80%]">
-              Hello, please sign in to your account
-            </label>
-
-            <form className="w-[80%] mt-5">
-              <div className="mb-6">
-                <BottomTextInput
-                  name={"email"}
-                  placeholder={"Email"}
-                  type={"email"}
-                />
-                <BottomTextInput
-                  name={"password"}
-                  placeholder={"Password"}
-                  type={"password"}
-                />
-                <div className="flex items-center">
-                  <Checkbox />
-                  <label className="ml-2 text-slate-800">Remember me</label>
-
-                  <a href="#" className="text-slate-800 text-sm ml-auto">
-                    Forgot password?
-                  </a>
-                </div>
-              </div>
-              <Button className="w-full mt-5">Sign in</Button>
-            </form>
+    <div className="bg-black text-white w-full h-full flex">
+      <div className="h-full flex flex-col flex-1 justify-center">
+        <div className="px-24">
+          <div className="text-center flex flex-col gap-5">
+            <h1 className="text-5xl font-bold">Hi there!</h1>
+            <h3 className="text-xl font-semibold">
+              Welcome to PlanetZero. An Awarness Pollution Blog Website
+            </h3>
           </div>
-          <div className="w-full h-[10%] flex items-start pl-10">
-            <Label className="ml-3 me-2">Have no account?</Label>
-            <Link href={"/auth/signup"}>Sign Up</Link>
+          <Button outline gradientDuoTone="pinkToOrange" className="w-full mt-5">
+            Login with Google
+          </Button>
+          <div className="mx-auto flex">
+            <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
+              <div className="h-1 my-4 md:my-7">or</div>
+              <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
+          </div>
+          <div className="flex items-center justify-center w-full"></div>
+          <form className="w-full flex-col -mt-2">
+            <BottomTextInput
+              name={"email"}
+              placeholder={"Email"}
+              type={"email"}
+            />
+            <BottomTextInput
+              name={"password"}
+              placeholder={"Password"}
+              type={"password"}
+            />
+            <div className="w-full flex items-center">
+              <Link href="/forgotpassword" className="ml-auto">
+                Forgot Password
+              </Link>
+            </div>
+          </form>
+          <div className="w-full flex items-center justify-center my-4">
+            <Button color="light" className="text-black w-[50%]" pill>
+              Login
+            </Button>
+          </div>
+          <div className="flex items-center justify-center mt-5">
+            <p>Don't have an account?{" "}</p>
+            <Link href="/auth/signup">
+              Sign Up
+            </Link>
           </div>
         </div>
+      </div>
+      <div className="flex-1">
         <Image
           src="/siginimage.jpg"
-          alt="Descriptive text for screen readers"
           width={200}
           height={200}
-          className="flex-1 h-full"
+          className="w-full h-full"
+          alt="Picture of the author"
           layout="responsive"
         />
       </div>
@@ -64,4 +71,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignIn;

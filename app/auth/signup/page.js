@@ -1,6 +1,8 @@
 "use client";
-import React from "react";
+import React, {useState} from "react";
 import Link from "next/link";
+import {useRouter} from "next/navigation"
+import {axios} from "axios"
 
 //Components
 import BottomTextInput from "../../components/TextInput";
@@ -8,6 +10,16 @@ import Image from "next/image";
 import { Button, Checkbox, Label } from "flowbite-react";
 
 const SignUp = () => {
+	const [user, setUser] = useState({
+		email: "",
+		password: "",
+		username: ""
+	})
+
+	const onSignUp = async () => {
+		
+	}
+	
 	return (
 		<div className="w-full p-3 h-full">
 			<div className="bg-slate-200 h-full flex-1 rounded-xl flex flex-row">
@@ -32,19 +44,25 @@ const SignUp = () => {
 									name={"username"}
 									placeholder={"Username"}
 									type={"text"}
+									value={user.username}
+									setProp={setUser}
 								/>
 								<BottomTextInput
 									name={"email"}
 									placeholder={"Email"}
 									type={"email"}
+									value={user.email}
+									setProp={setUser}
 								/>
 								<BottomTextInput
 									name={"password"}
 									placeholder={"Password"}
 									type={"password"}
+									value={user.password}
+									setProp={setUser}
 								/>
 							</div>
-							<Button className="w-full mt-5">Sign up</Button>
+							<Button onClick={onSignUp} className="w-full mt-5">Sign up</Button>
 						</form>
 						<div className="flex items-center">OR</div>
 						<div className="flex w-[80%] justify-between items-center">
