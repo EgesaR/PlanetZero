@@ -14,7 +14,7 @@ const SplashScreen = ({ finishLoading }) => {
       targets: "#playlist",
       delay: 0,
       scale: 1,
-      duration: 18700,
+      duration: 5700,
       easing: "easeInOutExpo",
     });
   };
@@ -28,9 +28,10 @@ const SplashScreen = ({ finishLoading }) => {
   return (
     <main
       id={"playlist"}
-      className={`flex h-screen items-center justify-center z-20 bg-[url('/PlanetZero.gif')] bg-cover bg-no-repeat bg-center`}
+      className={`flex h-screen items-center justify-center z-20  bg-cover bg-no-repeat bg-center`}
       isMounted={isMounted}
     >
+      <div className="text-5xl sm:text-8xl font-bold">PlanetZero</div>
     </main>
   );
 };
