@@ -7,6 +7,16 @@ import BottomTextInput from "../../components/TextInput";
 import Image from "next/image";
 import { Button, Checkbox, Label, Carousel } from "flowbite-react";
 
+const CarouselItem = ({ image, title, description, titleStyle }) => (
+  <div className={`flex h-full items-center justify-center ${!image ? "bg-gray-400 dark:bg-gray-700" : ""} dark:text-white`}>
+    <img
+      src={image}
+      alt={!image ? "image for anything" : image}
+    />
+    <div className={`absolute bottom-[16%] sm:bottom-[15%] ${titleStyle}`}>{title}</div>
+  </div>
+);
+
 const SignIn = () => {
   const [user, setUser] = useState({
     email: "",
@@ -15,23 +25,21 @@ const SignIn = () => {
   });
   return (
     <div className="bg-black text-white w-full h-[100vh] overflow-y-scroll sm:overflow-y-hidden">
-      <div className="flex flex-col sm:flex-row h-[105vh] pt-3 pb-5">
-        <div className="h-56 sm:h-64 xl:h-80 2xl:h-96 px-3">
+      <div className="flex flex-col sm:flex-row-reverse h-[105vh] pt-3 pb-5">
+        <div className="h-56 sm:h-full px-3 sm:flex-1">
           <Carousel slide={false}>
-            <img src="https://flowbite.com/docs/images/carousel/carousel-1.svg" alt="..." />
-            <img src="https://flowbite.com/docs/images/carousel/carousel-2.svg" alt="..." />
-            <img src="https://flowbite.com/docs/images/carousel/carousel-3.svg" alt="..." />
-            <img src="https://flowbite.com/docs/images/carousel/carousel-4.svg" alt="..." />
-            <img src="https://flowbite.com/docs/images/carousel/carousel-5.svg" alt="..." />
+            <CarouselItem title={"The greatest threat to our planet is the belief that someone else will save it. — Robert Swan"} titleStyle={"pl-5 pr-1"} image={"https://flowbite.com/docs/images/carousel/carousel-1.svg"}/>
+            <CarouselItem title={"There is no planet B.  — Emmanuel Macron"} titleStyle={"pl-5 pr-1"} image={"https://flowbite.com/docs/images/carousel/carousel-2.svg"}/>
+            <CarouselItem title={"The Earth is a fine place and worth fighting for. — Ernest Hemingway"} titleStyle={"pl-5 pr-1"} image={"https://flowbite.com/docs/images/carousel/carousel-3.svg"}/>
+            <CarouselItem title={"The only way forward, if we are going to improve the quality of the environment, is to get everybody involved. — Richard Rogers"} titleStyle={"pl-2 pr-1 bottom-[13%] text-center"} image={"https://flowbite.com/docs/images/carousel/carousel-4.svg"}/>
+            <CarouselItem title={"The Earth is what we all have in common. — Wendell Berry"} titleStyle={"pl-5 pr-1"} image={"https://flowbite.com/docs/images/carousel/carousel-5.svg"}/>
           </Carousel>
         </div>
         <div className="h-full flex flex-col flex-1 justify-center">
           <div className="px-8 sm:px-16 mt-4">
             <div className="text-center flex flex-col gap-2">
               <h1 className="text-5xl font-bold">Hi there!</h1>
-              <h3 className="text-lg font-semibold">
-                Welcome to PlanetZero
-              </h3>
+              <h3 className="text-lg font-semibold">Welcome to PlanetZero</h3>
             </div>
             <Button
               outline
@@ -74,11 +82,12 @@ const SignIn = () => {
             </div>
             <div className="flex items-center justify-center mt-5">
               <p>Don't have an account? &nbsp;</p>
-              <Link href="/auth/signup" className="text-blue-500">Sign Up</Link>
+              <Link href="/auth/signup" className="text-blue-500">
+                Sign Up
+              </Link>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );
