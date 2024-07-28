@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
   useEffect(() => {
     if (isLoading) return;
   }, [isLoading]);
-  const user = null;
+  const user = "y";
   return (
     <html lang="en">
       <body className={`${inter.className} overflow-x-hidden`}>
@@ -38,7 +38,8 @@ export default function RootLayout({ children }) {
           ) : (
             <>
               <SpeedInsights />
-              <div className="{mt-[60px]} {h-[calc(100vh-62.5px)]} h-[100vh] w-100 overflow-hidden">
+              <Navbar />
+              <div className="mt-[60px] {h-[calc(100vh-62.5px)]} h-[100vh] w-100 overflow-hidden">
                 {children}
               </div>
             </>
