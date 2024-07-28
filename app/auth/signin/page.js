@@ -25,9 +25,9 @@ const SignIn = () => {
   });
   return (
     <div className="bg-black text-white w-full h-[100vh] overflow-y-scroll sm:overflow-y-hidden">
-      <div className="flex flex-col sm:flex-row-reverse h-[105vh] pt-3 pb-5">
-        <div className="h-56 sm:h-full px-3 sm:flex-1">
-          <Carousel slide={false}>
+      <div className="flex flex-col sm:flex-row-reverse h-[110vh] pt-3 pb-7 mb-3">
+        <div className="h-56 sm:h-[90%] px-3 sm:flex-1">
+          <Carousel slideInterval={7000}>
             <CarouselItem title={"The greatest threat to our planet is the belief that someone else will save it. — Robert Swan"} titleStyle={"pl-5 pr-1"} image={"https://flowbite.com/docs/images/carousel/carousel-1.svg"}/>
             <CarouselItem title={"There is no planet B.  — Emmanuel Macron"} titleStyle={"pl-5 pr-1"} image={"https://flowbite.com/docs/images/carousel/carousel-2.svg"}/>
             <CarouselItem title={"The Earth is a fine place and worth fighting for. — Ernest Hemingway"} titleStyle={"pl-5 pr-1"} image={"https://flowbite.com/docs/images/carousel/carousel-3.svg"}/>
@@ -35,8 +35,8 @@ const SignIn = () => {
             <CarouselItem title={"The Earth is what we all have in common. — Wendell Berry"} titleStyle={"pl-5 pr-1"} image={"https://flowbite.com/docs/images/carousel/carousel-5.svg"}/>
           </Carousel>
         </div>
-        <div className="h-full flex flex-col flex-1 justify-center">
-          <div className="px-8 sm:px-16 mt-4">
+        <div className="h-full flex flex-col flex-1">
+          <div className="px-8 sm:px-16 sm:h-[88.5%] mt-7 sm:mt-1.5 flex flex-col rounded-md justify-center">
             <div className="text-center flex flex-col gap-2">
               <h1 className="text-5xl font-bold">Hi there!</h1>
               <h3 className="text-lg font-semibold">Welcome to PlanetZero</h3>
@@ -48,10 +48,10 @@ const SignIn = () => {
             >
               Login with Google
             </Button>
-            <div className="mx-auto flex my-3">
-              <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
+            <div className="mx-auto flex my-3 w-full">
+              <hr class="h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700 grow" />
               <div className="h-1 my-1 md:my-7 mx-6 text-base">or</div>
-              <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
+              <hr class="h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700 grow" />
             </div>
             <div className="flex items-center justify-center w-full"></div>
             <form className="w-full flex-col -mt-2">
@@ -70,7 +70,7 @@ const SignIn = () => {
                 setProp={setUser}
               />
               <div className="w-full flex items-center">
-                <Link href="/forgotpassword" className="ml-auto text-blue-500">
+                <Link href="/forgotpassword" className="ml-auto text-cyan-600">
                   Forgot Password
                 </Link>
               </div>
@@ -82,7 +82,7 @@ const SignIn = () => {
             </div>
             <div className="flex items-center justify-center mt-5">
               <p>Don't have an account? &nbsp;</p>
-              <Link href="/auth/signup" className="text-blue-500">
+              <Link href="/auth/signup" className="text-cyan-600">
                 Sign Up
               </Link>
             </div>
