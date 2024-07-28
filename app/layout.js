@@ -35,8 +35,7 @@ export default function RootLayout({ children }) {
         ) : (
           <>
             <SpeedInsights />
-            <Navbar />
-            <div className="mt-[60px] h-[calc(100vh-62.5px)] w-100 overflow-hidden">
+            <div className="{mt-[60px]} {h-[calc(100vh-62.5px)]} h-[100vh] w-100 overflow-hidden">
               {children}
             </div>
           </>
