@@ -1,0 +1,25 @@
+---
+title: "My First Python Post"
+description: "Python example for planetZero"
+author: "ISAAC"
+date: "2025-10-09"
+categories: [python]
+jupyter: python3
+format: 
+    html: 
+        code-fold: true
+---
+## Welcome to planetZero
+
+```{python}
+print("Hello from Python 3.14.0!")
+```
+```{python}
+#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange()
+```
